@@ -1,6 +1,9 @@
 $(function(){
   $('#tags input').on('focusout',function(){
     //validate for email address
+    if(this.value ==='') {
+      return;
+    }
     var regularExp = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
     if(!regularExp.test(this.value)) {
       alert("Invalid Email Address");
